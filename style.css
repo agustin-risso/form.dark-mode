@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+:root {
+	--dark-background: #1d1a31;
+	--light-background: #c76d7e;
+	--dark-button: #2e1e4d;
+	--light-button: #a3333d;
+	--dark-container: #66023c;
+	--light-container: #ffa5ab;
+	--dark-input: #ac535c;
+	--light-input: #aa767c;
+	--dark-font: #121212;
+	--light-font: #cfcfcf;
+}
+
+* {
+	font-family: "Poppins", sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: var(--light-background);
+	position: relative;
+}
+
+body.dark {
+	background-color: var(--dark-background);
+}
+
+.color-btn-container {
+	position: absolute;
+	z-index: 0;
+	top: 5%;
+	right: 5%;
+}
+
+.color-btn-container #change-color-btn {
+	border: 1px solid transparent;
+	background-color: var(--light-button);
+	border-radius: 0.5rem;
+	padding: 0.4rem 1rem;
+	color: var(--dark-font);
+	cursor: pointer;
+	transition: all 0.3s;
+	font-weight: 500;
+}
+
+body.dark #change-color-btn {
+	background-color: var(--dark-button);
+	color: var(--light-font);
+}
+
+.color-btn-container #change-color-btn:hover {
+	border: 1px solid transparent;
+	color: var(--light-font);
+	background-color: var(--dark-button);
+}
+
+body.dark #change-color-btn:hover {
+	background-color: var(--light-button);
+	color: var(--dark-font);
+}
+
+.container {
+	width: 30%;
+	height: 30%;
+	border: 1px solid transparent;
+	border-radius: 1rem;
+	background-color: var(--light-container);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.5rem 1rem;
+}
+
+body.dark .container {
+	background-color: var(--dark-container);
+}
+
+.container #myForm {
+	width: 55%;
+	display: flex;
+	flex-direction: column;
+	gap: 0.2rem;
+	color: var(--dark-font);
+	font-size: 1.1rem;
+	font-weight: 400;
+}
+
+body.dark #myForm {
+	color: var(--light-font);
+}
+
+.container #myForm #name,
+.container #myForm #email {
+	margin-bottom: 0.75rem;
+	background-color: transparent;
+	border: 1px solid transparent;
+	border-bottom: 2px solid var(--light-input);
+	padding: 0.25rem 1rem 0.25rem 0.5rem;
+	color: var(--dark-font);
+	outline: none;
+	font-size: 0.85rem;
+}
+
+body.dark #myForm #name,
+body.dark #myForm #email {
+	background-color: transparent;
+	border-bottom: 2px solid var(--dark-input);
+	color: var(--light-font);
+}
+
+.container #myForm #name:focus,
+.container #myForm #email:focus {
+	background-color: transparent;
+}
+
+body.dark .container #myForm #name:focus,
+body.dark .container #myForm #email:focus {
+	background-color: transparent;
+}
+
+.container #myForm .button-container {
+	display: flex;
+	justify-content: center;
+}
+
+.container #myForm #submit {
+	width: 50%;
+	border: 1.75px solid transparent;
+	border-radius: 1rem;
+	font-size: 0.9rem;
+	font-weight: 500;
+	padding: 0.4rem 1rem;
+	background-color: var(--light-button);
+	cursor: pointer;
+	color: var(--dark-font);
+	outline: none;
+	transition: all 0.3s;
+}
+
+body.dark #myForm #submit {
+	color: var(--light-font);
+	background-color: var(--dark-button);
+	border: 1.75px solid transparent;
+}
+
+.container #myForm #submit:hover {
+	border: 1.75px solid transparent;
+	background-color: var(--dark-button);
+	color: var(--light-font);
+}
+
+body.dark #myForm #submit:hover {
+	border: 1.75px solid transparent;
+	background-color: var(--light-button);
+	color: var(--dark-font);
+}
+
+.container #myForm #submit:active {
+	transform: scale(0.95);
+}
